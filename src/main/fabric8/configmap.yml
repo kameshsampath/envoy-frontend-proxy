@@ -5,7 +5,7 @@ data:
    {
      "listeners": [
        {
-         "port": 80,
+         "port": 8080,
          "filters": [
            {
              "type": "read",
@@ -64,8 +64,7 @@ data:
            ],
            "circuit_breakers": {
               "default": {
-                 "max_requests
-                 ": 10
+                 "max_requests": 10
               }
            }
          }
