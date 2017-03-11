@@ -21,9 +21,14 @@ data:
                      "routes": [
                        {
                          "timeout_ms": 0,
-                         "prefix": "/",
+                         "prefix": "/api/goodbye",
                          "cluster": "goodbye_springboot"
-                       }
+                       },
+                      {
+                        "timeout_ms": 0,
+                        "prefix": "/api/nap",
+                        "cluster": "goodbye_springboot"
+                      }
                      ]
                    }
                  ]
@@ -54,7 +59,7 @@ data:
            "features": "http2",
            "hosts": [
              {
-               "url": "tcp://goodbye-server-springboot:80"
+               "url": "tcp://goodbye-server-springboo:80"
              }
            ]
          }
