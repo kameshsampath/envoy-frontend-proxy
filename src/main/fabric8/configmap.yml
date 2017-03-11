@@ -61,7 +61,12 @@ data:
              {
                "url": "tcp://goodbye-server-springboo:80"
              }
-           ]
+           ],
+           "circuit_breakers": {
+              "default": {
+                 "max_pending_requests": 10
+              }
+           }
          }
        ]
      }
