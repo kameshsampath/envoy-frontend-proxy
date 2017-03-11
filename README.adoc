@@ -1,0 +1,30 @@
+= Envoy Frontend Proxy
+
+Deploys the https://github.com/lyft/envoy[envoy] as front en proxy to kubernetes services.
+
+NOTE: The proxy now deploy only one service and typically used for demo purposes, in future this limitation will be
+removed via an UI allowing you to deply multiple front-end proxies.
+
+== Deploying proxy
+
+The proxy could be deployed using the command `mvn clean install fabric8:deploy`.
+
+TIP: to deploy the frontend proxy for a kubernetes service called `hello-world` listening on port `8080`,
+and with application context root as `/api`,
+
+you can do `mvn -DserviceUrl=tcp://hello-world:8080 -DservicePath=/api clean install fabric8:deploy`
+
+
+[[config-parameters]]
+=== Configurable parameters
+
+The maven build has the following properties specific to configuring the proxy cluster url, routing path etc.,
+
+* serviceUrl
+
+  The parameter that is used to define the backend service url, e.g. tcp://my-kubernetes-service:8080
+
+* servicePath
+
+  The service API path, this is typically the root context path of the application e.g. /api
+
