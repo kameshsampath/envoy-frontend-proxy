@@ -10,6 +10,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>envoy-frontend-proxy</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <name>Envoy::Frontend Proxy</name>
 
   <properties>
