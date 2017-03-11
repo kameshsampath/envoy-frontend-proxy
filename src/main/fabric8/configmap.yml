@@ -64,7 +64,8 @@ data:
            ],
            "circuit_breakers": {
               "default": {
-                 "max_pending_requests": 10
+                 "max_requests
+                 ": 10
               }
            }
          }
